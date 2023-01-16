@@ -1,0 +1,12 @@
+.header {
+  width: 100vw;
+  /* 粘性定位 */
+  position: sticky;
+  background-color: #fff;
+  top: 0;
+  z-index: 999;
+}
+.header .tab {
+  --active-line-color: #fa0758;
+  --active-title-color: #fa0758;
+}

@@ -1,0 +1,43 @@
+.video-box {
+  position: relative;
+}
+.video-box .video-box-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.video-box .video-box-top .avatar-box {
+  display: flex;
+  align-items: center;
+}
+.video-box .video-box-top .avatar-box .avatar {
+  height: 2rem;
+  width: 2rem;
+  --border-radius: 50%;
+}
+.video-box .video-box-top .avatar-box .nick-name {
+  margin-left: 0.5rem;
+}
+.video-box .video-box-content .header-title {
+  padding: 0.5rem;
+  color: #666;
+}
+.video-box .video-box-content .video {
+  width: 100vw;
+}
+.video-box .video-box-bottom {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.video-box .video-box-bottom .eye {
+  color: #666;
+}
+.video-box .video-box-bottom .view-time {
+  color: #666;
+}
+.video-box .video-box-bottom .tag {
+  margin-right: 0.5rem;
+}

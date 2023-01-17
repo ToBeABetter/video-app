@@ -8,7 +8,7 @@ export default function VideoBox(props) {
   const {playUrl, title, index, cover} = props
   
   const initPlayer = () => {
-    let player = new Player({
+    new Player({
       el: document.getElementsByClassName('video')[index],
       id: 'player',
       url: playUrl,

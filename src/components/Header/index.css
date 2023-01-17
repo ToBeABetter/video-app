@@ -5,6 +5,7 @@
   background-color: #fff;
   top: 0;
   z-index: 999;
+  border-bottom: 1px solid #ccc;
 }
 .header .tab {
   --active-line-color: #fa0758;

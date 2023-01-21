@@ -3,9 +3,12 @@ import { Avatar, Tag } from 'antd-mobile'
 import { EyeOutline, LikeOutline, MoreOutline, MessageOutline, SendOutline } from 'antd-mobile-icons'
 import './index.css'
 import Player from "xgplayer";
+import { useNavigate } from "react-router-dom";
 
 export default function VideoBox(props) {
-  const {playUrl, title, index, cover} = props
+  const {videoInfo, index} = props
+  console.log(videoInfo)
+  const {data: {header: {title, icon}, content: {data: {playUrl, author: {name}, category, cover: {detail: cover}}}}} = videoInfo
   
   const initPlayer = () => {
     new Player({
@@ -23,12 +26,18 @@ export default function VideoBox(props) {
     }
   }, [])
 
+  // 页面跳转
+  const navigate = useNavigate()
+  const detail = () => {
+    navigate('/detail', {state: videoInfo})
+  }
+
   return (
     <div className="video-box">
       <div className="video-box-top">
         {/* 头像 */}
         <span className="avatar-box">
-          <Avatar className="avatar" src={'./assets/img/tom.jpg'}></Avatar> <b className="nick-name">打开眼戒</b>
+          <Avatar className="avatar" src={icon}></Avatar> <b className="nick-name">{ name }</b>
         </span>
         {/* 图标 */}
         <span>
@@ -36,15 +45,9 @@ export default function VideoBox(props) {
         </span>
       </div>
       <div className="video-box-content">
-        <div className="header-title">
-          {title}
+        <div className="header-title" onClick={detail}>
+          {title} <span style={{'color': '#aaa', 'marginLeft': '.5rem'}}>{`#${category}`}</span>
         </div>
-        {/* <video
-          className="video"
-          src={playUrl}
-          width="100%"
-          controls
-        ></video> */}
         <div className="video">
         </div>
       </div>

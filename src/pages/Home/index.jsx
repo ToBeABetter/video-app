@@ -11,7 +11,6 @@ export default function Home() {
     const {itemList} = res.data
     const [firstList] = itemList
     const videoList = firstList.data.itemList
-    console.log(videoList)
     setVideo(videoList)
   }
 
@@ -24,7 +23,7 @@ export default function Home() {
   return (
     <div className="home">
       {/* 视频列表 */}
-      <VideoList homeVideoList={homeVideoList} />
+      <VideoList videoList={homeVideoList} />
     </div>
   )
 }

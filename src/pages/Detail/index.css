@@ -1,0 +1,33 @@
+.detail .video-box {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.detail .video-box .video-title {
+  padding: 0.5rem;
+  color: #666;
+}
+.detail .video-box .review {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.detail .video-box .review .view-time {
+  color: #666;
+}
+.detail .video-box .review .like {
+  color: #666;
+}
+.detail .comment {
+  margin-top: 1rem;
+}
+.detail .comment-input {
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+}
+.detail .comment-input .input {
+  padding: 0 0.5rem;
+  background-color: #fff;
+}

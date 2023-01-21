@@ -19,3 +19,23 @@ export const getTabList = (data) => {
     }
   )
 }
+// 关注列表
+export const getFollowList = (data) => {
+  return fetch(
+    {
+      url: '/api/v5/community/tab/list',
+      method: 'get',
+      data
+    }
+  )
+}
+// 视频详情
+export const getVideoDetail = (data) => {
+  return fetch(
+    {
+      url: '/api/v4/video/related',
+      method: 'get',
+      data
+    }
+  )
+}

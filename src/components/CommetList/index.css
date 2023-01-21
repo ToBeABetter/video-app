@@ -1,0 +1,11 @@
+.comment .title {
+  display: flex;
+  justify-content: space-between;
+  color: #bbb;
+  font-size: 0.9rem;
+}
+.comment .content {
+  margin-top: 0.5rem;
+  color: #666;
+  font-size: 1rem;
+}

@@ -2,13 +2,12 @@ import React, { Fragment } from "react";
 import "./index.css";
 import VideoBox from "../Video";
 export default function VideoList(props) {
-  const {homeVideoList} = props
+  const {videoList} = props
   return (
     <Fragment>
-      {homeVideoList.map((item, index) => {
-        const {data: {header: {title}, content: {data: {playUrl, cover: {detail}}}}} = item
+      {videoList.map((item, index) => {
         return (
-          <VideoBox playUrl={playUrl} title={title} key={index} index={index} cover={detail}></VideoBox>
+          <VideoBox key={index} index={index} videoInfo={item}></VideoBox>
         );
       })}
     </Fragment>
